@@ -265,7 +265,7 @@ exports.saveDoc = function (doc, /*optional*/options, callback) {
     }
     else {
         method = "PUT";
-        url += '/' + doc._id;
+        url += '/' + exports.encode( doc._id );
     }
     var req = {
         type: method,
